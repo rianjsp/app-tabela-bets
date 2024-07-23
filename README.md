@@ -20,3 +20,22 @@ Apesar de ser simples, o Tabela.bets oferece acesso às tabelas dos principais c
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+
+## `API`
+
+#### GET NOS PRINCIPAIS ENDPOINTS DA API-PYTHON
+
+```http
+  GET /table
+  GET /campeonato
+  GET /partidas
+```
+
+#### API DE REFERENCIA UTILIZADA PARA O PYTHOM TRANSMITIR 
+`https://dashboard.api-futebol.com.br/`
+```http
+    GET https://api.api-futebol.com.br/v1/campeonatos/{campeonato_id}/tabela
+    GET https://api.api-futebol.com.br/v1/campeonatos/{campeonato_id}
+    etc...
+```
