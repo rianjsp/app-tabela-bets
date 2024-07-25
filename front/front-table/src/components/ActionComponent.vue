@@ -8,7 +8,7 @@
                 
                 <div class="btDesciption">
                         <ButtonComponent :msg="'Tabela'" to="/table" />
-                        <ButtonComponent :msg="'Brasileirão '" to="/table"/>
+                        <ButtonComponent :msg="'Bets '" to="/bets"/>
                 </div>
 
             </div>
@@ -21,7 +21,7 @@
                 <div class="flex flex-col justify-center items-center">
                     <img src="../assets/jogadores-removebg-preview.png" alt="jogadores" width="300px">
                     <div>
-                        <ButtonComponent :msg="'Ver Tabela'" to="/table"/>
+                        <ButtonComponent :msg="'Bets'" to="/bets"/>
                         <ButtonComponent :msg="'Campeonato Brasileiro - Serie A'" to="/table"/>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request  # Importar request aqui
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from dotenv import load_dotenv
 from pymongo import MongoClient
@@ -8,7 +8,7 @@ import os
 # Carregar variáveis de ambiente
 load_dotenv()
 
-# Instanciamento da aplicação
+# Instanciação da aplicação
 app = Flask(__name__)
 CORS(app)
 
@@ -49,36 +49,10 @@ else:
 @app.route('/data', methods=['GET'])
 def get_data():
     try:
-        data = list(collection.find())
-        return jsonify(data)
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-@app.route('/data', methods=['POST'])
-def post_data():
-    try:
-        data_bet = request.form.get('data')
-        times_bet = request.form.getlist('times')
-        participantes_bet = request.form.getlist('participantes')
-        tipo_aposta_bet = request.form.getlist('tipo_aposta')
-
-        # Criando a nova aposta
-        new_bet = {
-            "data": data_bet,
-            "times": times_bet,
-            "participantes": participantes_bet,
-            "tipo_aposta": tipo_aposta_bet
-        }
-
-        # Inserção no MongoDB
-        result = collection.insert_one(new_bet)
-
-        # Verificação do resultado da inserção
-        if result.acknowledged:
-            return jsonify({"message": "Aposta registrada com sucesso!", "id": str(result.inserted_id)}), 201
-        else:
-            return jsonify({"error": "Erro ao registrar aposta"}), 500
-
+        data_list = list(collection.find())
+        for item in data_list:
+            item["_id"] = str(item["_id"])  # Converte ObjectId para string
+        return jsonify(data_list)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

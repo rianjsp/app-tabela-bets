@@ -5,9 +5,6 @@
     <router-link class="nav-link" to="/bets">BETS</router-link>
   </nav>
   <router-view/>
-  <footer class="flex items-center justify-center font-bold">
-    <h5>Feito por Rian</h5>
-  </footer>
 </template>
 
 <style scoped>
