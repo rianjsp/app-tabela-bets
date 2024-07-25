@@ -2,11 +2,11 @@
     <div class="min-h-screen from-purple-200 via-purple-300 to-purple-500 flex flex-col items-center justify-center p-4">
       
       <div class="table-name text-bold">
-        <h1 class="m-5 text-3xl text-semibold text-green-900 border-b  border-b-rose-900">Brasileirão</h1>
+        <h1 class="m-5 text-3xl text-green-900 border-b  border-b-green-900"><strong>Brasileirão</strong></h1>
       </div>
 
       <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-        <thead class="bg-green-300">
+        <thead class="bg-gray-300">
           
           <tr>
             <th class="py-1 px-2">Escudo</th>
@@ -17,14 +17,14 @@
             <th class="py-1 px-2">Derrotas</th>
             <th class="py-1 px-2">Empates</th>
             <th class="py-1 px-2">Vitórias</th>
-            <th class="py-1 px-2">Gols <strong class="text-green-900">Pro</strong></th>
-            <th class="py-1 px-2">Gols <strong class="text-rose-900">Contra</strong></th>
+            <th class="py-1 px-2">Gols <strong class="text-green-600">Pro</strong></th>
+            <th class="py-1 px-2">Gols <strong class="text-rose-600">Contra</strong></th>
             <th class="py-1 px-2">Saldo de Gols</th>
             <th class="py-1 px-2">Últimos Jogos</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in table" :key="item.id" class="hover:bg-purple-100">
+          <tr v-for="item in table" :key="item.id" class="hover:bg-gray-100">
             <td class="py-2 px-4">
               <img :src="item.time.escudo" alt="Escudo" width="40px">
             </td>
@@ -44,7 +44,7 @@
                   <i class="text-green-900 fa-solid fa-circle"></i>
                 </span>
                 <span v-else-if="jogo === 'e'">
-                  <i class="text-yellow-900 fa-solid fa-circle"></i>
+                  <i class="text-gray-900 fa-solid fa-circle"></i>
                 </span>
                 <span v-else>
                   <i class="text-red-900 fa-solid fa-circle"></i>

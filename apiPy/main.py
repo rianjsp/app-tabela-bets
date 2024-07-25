@@ -16,7 +16,7 @@ CORS(app)
 mongo_uri = os.getenv("MONGO_URI")
 client = MongoClient(mongo_uri)
 db = client.get_default_database()
-collection = db.bets  # Supondo que a coleção se chama 'bets'
+collection = db.bets  
 
 # Inicialização do header contendo a chave
 api_key = os.getenv("API_KEY")
@@ -30,7 +30,7 @@ header = {
 def fetch_data():
     try:
         response = requests.get(url, headers=header)
-        response.raise_for_status()  # Lança um erro para códigos de status HTTP >= 400
+        response.raise_for_status() 
         data = response.json()
         print('Conteúdo retornado com sucesso!')
         return data

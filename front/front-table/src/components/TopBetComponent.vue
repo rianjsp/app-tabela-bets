@@ -1,6 +1,6 @@
 <template>
   <!-- Card de exibição das apostas -->
-  <section class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
+  <section class=" p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
     <div v-for="(bet) in BetList" :key="bet._id" class="hover:scale-105 transition-all easy-in-out bg-white rounded-lg shadow-lg overflow-hidden">
       <div class="p-4 ">
         <h2 class="text-xl font-semibold text-gray-800 mb-2">Bet ID: {{ bet._id }}</h2>

@@ -3,7 +3,7 @@
     
     <ActionComponent/>
     <DescriptionComponent/>
-    <InfoComponent/>
+    
     
   </div>
 </template>
