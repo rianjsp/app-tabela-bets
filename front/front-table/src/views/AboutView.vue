@@ -1,12 +1,16 @@
 <template>
   <div>
-    
+    <AboutComponent/>
   </div>
 </template>
 
 <script>
-export default {
+import AboutComponent from '@/components/AboutComponent.vue';
 
+export default {
+  components:{
+    AboutComponent
+  }
 }
 </script>
 

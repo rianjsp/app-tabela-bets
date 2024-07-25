@@ -1,7 +1,13 @@
 <template>
-    <div class="min-h-screen from-purple-200 via-purple-300 to-purple-500 flex items-center justify-center p-4">
+    <div class="min-h-screen from-purple-200 via-purple-300 to-purple-500 flex flex-col items-center justify-center p-4">
+      
+      <div class="table-name text-bold">
+        <h1 class="m-5 text-3xl text-semibold text-green-900 border-b  border-b-rose-900">Brasileirão</h1>
+      </div>
+
       <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-        <thead class="bg-purple-300">
+        <thead class="bg-green-300">
+          
           <tr>
             <th class="py-1 px-2">Escudo</th>
             <th class="py-1 px-2">Nome</th>
@@ -72,7 +78,7 @@
         try {
           const response = await axios.get('http://127.0.0.1:5000/table');
           this.table = response.data.tabela;
-          console.log(this.table);
+
         } catch (error) {
           console.error('Erro ao buscar dados:', error);
         }

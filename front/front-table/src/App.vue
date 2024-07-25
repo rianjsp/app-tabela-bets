@@ -2,6 +2,7 @@
   <nav class="font-semibold pt-10">
     <router-link class="nav-link" to="/">HOME</router-link>
     <router-link class="nav-link" to="/about">ABOUT</router-link>
+    <router-link class="nav-link" to="/bets">BETS</router-link>
   </nav>
   <router-view/>
   <footer class="flex items-center justify-center font-bold">
