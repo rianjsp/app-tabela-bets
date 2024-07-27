@@ -51,3 +51,6 @@ Apesar de ser simples, o Tabela.bets oferece acesso às tabelas dos principais c
     GET https://api.api-futebol.com.br/v1/campeonatos/{campeonato_id}
     etc...
 ```
+
+
+### WORKING ON PROGRESS
