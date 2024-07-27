@@ -30,9 +30,9 @@ header = {
 def fetch_data():
     try:
         response = requests.get(url, headers=header)
-        response.raise_for_status() 
+        response.raise_for_status()
         data = response.json()
-        print('Conteúdo retornado com sucesso!')
+        print('Conteudo retornado com sucesso!')
         return data
     except requests.exceptions.RequestException as e:
         print(f'Ocorreu um erro na requisição: {e}')
@@ -54,6 +54,32 @@ def get_data():
             item["_id"] = str(item["_id"])  # Converte ObjectId para string
         return jsonify(data_list)
     except Exception as e:
+        print(f"Erro ao obter dados: {e}")
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/data/post', methods=['POST'])
+def post_data():
+    try:
+        # Receber dados JSON
+        data = request.json
+
+        # Validar e processar os dados
+        new_bet = {
+            "_id": data.get('bet_id'),
+            "data": data.get('data'),
+            "horario": data.get('horario'),
+            "times": data.get('times'),
+            "participantes": data.get('participantes'),
+            "tipo_aposta": data.get('tipo_aposta'),
+            "palpites": data.get('palpites')
+        }
+
+        resultado = collection.insert_one(new_bet)
+        print('Bet inserida com sucesso')
+        return jsonify({"message": "Bet inserida com sucesso", "id": str(resultado.inserted_id)}), 201
+
+    except Exception as e:
+        print(f"Erro ao inserir bet: {e}")
         return jsonify({"error": str(e)}), 500
 
 @app.route('/table', methods=['GET'])

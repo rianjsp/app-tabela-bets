@@ -1,6 +1,6 @@
 <template>
   <!-- Card de exibição das apostas -->
-  <section class=" p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
+  <section class=" p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5 w-full">
     <div v-for="(bet) in BetList" :key="bet._id" class="hover:scale-105 transition-all easy-in-out bg-white rounded-lg shadow-lg overflow-hidden">
       <div class="p-4 ">
         <h2 class="text-xl font-semibold text-gray-800 mb-2">Bet ID: {{ bet._id }}</h2>
@@ -33,9 +33,13 @@
 
         <div class="mt-4">
           <h3 class="text-lg font-semibold text-gray-800 mb-2">Tipo de Aposta:</h3>
-          <ul class="list-disc pl-5 text-gray-600">
-            <li v-for="(tipo, tpIndex) in bet.tipo_aposta" :key="'tipo-' + bet._id + '-' + tpIndex">{{ tipo }}</li>
-          </ul>
+          <span>{{ bet.tipo_aposta }}</span>
+        </div>
+
+        <div class="mt-4">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Palpite:</h3>
+          <span v-if="bet.palpites">{{ bet.palpites }}</span>
+          <span v-else class="font-bold text-rose-600">Não incluiu Palpites</span>
         </div>
       </div>
     </div>
