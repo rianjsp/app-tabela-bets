@@ -1,7 +1,7 @@
 <template>
-<div class="items-center flex flex-col">
+<div class="items-center  flex flex-col justify-center">
 
-    <div class="w-1/2">
+    <div class="w-3/4 flex flex-col">
         <span class="text-3xl items-center flex justify-center text-center font-semibold mt-5"><strong class="text-decoration">R</strong>ealizar Aposta</span>
         <div class="h-full">
 
@@ -9,7 +9,7 @@
         </div>
     </div>
 
-<div class="w-2/2 mb-10 ">
+<div class="w-2/2 mb-10 betView">
 
     <span class="text-3xl font-semibold items-center flex justify-center text-center font-semibold mt-5"><strong class="text-decoration">Ú</strong>ltimas Apostas Feitas</span>
     <div class="rounded-xl mt-5 shadow-2xl flex flex-col items-center h-96 overflow-y-auto border-rose-600 mx-20">

@@ -10,7 +10,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt tempora modi totam quasi quaerat excepturi ea, nulla, sequi illo est labore explicabo laborum fugiat eos delectus quidem iste minima!</p>
                     </div>
                     <div class="mt-4">
-                        <ButtonComponent :msg="'Mais Detalhes'" to="/table" />
+                        <ButtonComponent :msg="'Mais Detalhes'" to="/about" />
                     </div>
                 </div>
                 <div>
