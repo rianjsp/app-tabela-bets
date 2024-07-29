@@ -1,5 +1,5 @@
 <template>
-<div class="items-center  flex flex-col justify-center animate__animated animate__backInUp">
+<div class="items-center  flex flex-col justify-center animate__animated animate__backInRight">
 
     <div class="w-3/4 flex flex-col">
         <span class="text-3xl items-center flex justify-center text-center font-semibold mt-5"><strong class="text-decoration">R</strong>ealizar Aposta</span>

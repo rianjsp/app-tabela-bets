@@ -18,7 +18,7 @@ client = MongoClient(mongo_uri)
 db = client.get_default_database()
 collection = db.bets  
 
-# Inicialização do header contendo a chave
+# Inicialização do header contendo a chave da api e url
 api_key = os.getenv("API_KEY")
 url = os.getenv("URI_API")
 

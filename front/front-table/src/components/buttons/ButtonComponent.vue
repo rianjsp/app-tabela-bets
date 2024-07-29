@@ -1,37 +1,20 @@
 <template>
-    <router-link :to="to" class="rounded border-2 p-2 m-2 cursor-pointer text-white font-semibold hover:bg-rose-400 hover:text-black transition-all ease-in-out active:scale-102">
+    <router-link :to="to" class="btn-link inline-block rounded-lg border-2 border-transparent bg-purple-700 text-white font-semibold py-2 px-4 m-2 text-center cursor-pointer hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-transform transform hover:scale-105 active:scale-95">
       {{ msg }}
     </router-link>
   </template>
   
   <script>
   export default {
-      props: {
-          msg: {
-              type: String,
-              required: true
-          },
-          to: {
-              type: String,
-              required: true
-          }
+    props: {
+      msg: {
+        type: String,
+        required: true
+      },
+      to: {
+        type: String,
+        required: true
       }
+    }
   }
   </script>
-  
-  <style scoped>
-  router-link {
-      display: inline-block;
-      text-decoration: none;
-      background-color: #A729A5;
-      border-radius: 8px;
-      padding: 8px;
-      margin: 4px;
-  }
-  
-  router-link:hover {
-      background-color: #D63C6E;
-      color: #000;
-  }
-  </style>
-  
