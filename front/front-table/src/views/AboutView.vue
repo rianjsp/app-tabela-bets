@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AboutComponent/>
+    <AboutComponent class="animate__animated animate__backInRight"/>
   </div>
 </template>
 

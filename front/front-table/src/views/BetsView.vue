@@ -1,5 +1,5 @@
 <template>
-<div class="items-center  flex flex-col justify-center">
+<div class="items-center  flex flex-col justify-center animate__animated animate__backInUp">
 
     <div class="w-3/4 flex flex-col">
         <span class="text-3xl items-center flex justify-center text-center font-semibold mt-5"><strong class="text-decoration">R</strong>ealizar Aposta</span>
@@ -9,10 +9,10 @@
         </div>
     </div>
 
-<div class="w-2/2 mb-10 betView">
+<div class="w-2/2 mb-10 betView animate__animated animate__backInUp">
 
     <span class="text-3xl font-semibold items-center flex justify-center text-center font-semibold mt-5"><strong class="text-decoration">Ú</strong>ltimas Apostas Feitas</span>
-    <div class="rounded-xl mt-5 shadow-2xl flex flex-col items-center h-96 overflow-y-auto border-rose-600 mx-20">
+    <div class="topbet rounded-xl mt-5 shadow-2xl flex flex-col items-center overflow-y-auto border-rose-600 mx-20">
         
         <TopBetComponent class="mt-5 "/>
         
@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import DownBetComponent from '@/components/DownBetComponent.vue';
-import TopBetComponent from '../components/TopBetComponent.vue'
+import DownBetComponent from '@/components/betComponent/DownBetComponent.vue';
+import TopBetComponent from '@/components/betComponent/TopBetComponent.vue'
 
 export default {
     components:{
@@ -36,5 +36,8 @@ export default {
 <style scoped>
 .text-decoration{
     color: #FF0096;
+}
+.topbet{
+    height: 600px !important;
 }
 </style>

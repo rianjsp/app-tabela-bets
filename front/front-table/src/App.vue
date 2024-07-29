@@ -41,4 +41,8 @@ nav a.router-link-exact-active {
 footer{
   color: #FF0096;
 }
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
 </style>
