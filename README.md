@@ -22,14 +22,26 @@ Apesar de ser simples, o Tabela.bets oferece acesso às tabelas dos principais c
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 
-## `API`
+## `API's`
 
-#### GET NOS PRINCIPAIS ENDPOINTS DA API-PYTHON
+#### PRINCIPAIS ENDPOINTS DA API-PYTHON
 
 ```http
+  GET /data
+  POST /data/post
   GET /table
   GET /campeonato
   GET /partidas
+```
+
+### RESUMO
+
+```
+  1° Óbtem todos os tickets bet feitos no banco de dados.
+  2° Realiza a criação dos tickets no banco de dados.
+  3° Óbtem a tabela do campeonato apresentado 'Brasileirão 2024 - Série A'.
+  4° Óbtem as informações relacionados ao Campeonato apresentado 'Brasileirão 2024 - Série A'.
+  5° Óbtem informações sobre as partidas do Campeonato apresentado 'Brasileirão 2024 - Série A'.
 ```
 
 #### API DE REFERENCIA UTILIZADA PARA O PYTHOM TRANSMITIR 
@@ -39,3 +51,6 @@ Apesar de ser simples, o Tabela.bets oferece acesso às tabelas dos principais c
     GET https://api.api-futebol.com.br/v1/campeonatos/{campeonato_id}
     etc...
 ```
+
+
+### WORKING ON PROGRESS
